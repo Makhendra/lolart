@@ -15,6 +15,10 @@ img {
     flex-wrap: nowrap;
 }
 
+.col-25 {
+    width: 25%;
+}
+
 .col-30 {
     width: 30%;
 }
@@ -47,6 +51,21 @@ img {
     padding-top: 15%;
 }
 
+.menu {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    justify-content: space-between;
+}
+
+.logo {
+    min-height: 1vh;
+    max-height: 8vh;
+}
+
+img.logo {
+    object-fit: contain;
+}
+
 .header {
     background-image: url("../images/header.jpg");
     height: 80vh;
@@ -55,40 +74,33 @@ img {
     background-size: cover;
 }
 
-.menu {
-    padding: 15px;
+.title {
+    text-align: center;
+    margin: 12%;
+    max-width: 70%;
+    background: rgba(0, 0, 0, 0.3);
 }
 
-.logo {
-    max-height: 10vh;
-    margin-bottom: 10vh;
-}
-
-img.logo {
-    object-fit: contain;
-}
-
-.header a, .footer a {
+.header a, .title {
     color: white;
-    font-size: 1.2em;
-    text-decoration-line: none;
-    padding: 10px;
 }
 
 .header a:focus, .header a:hover {
     color: black;
 }
 
-.title {
-    text-align: center;
-    color: white;
-    margin: 5% 15%;
-    max-width: 70%;
+.header a, .footer a {
+    font-size: 1.2em;
+    text-decoration-line: none;
+    padding: 10px;
 }
 
-.about h2 {
-   margin-left: 5%;
-    margin-bottom: 0%;
+.footer a {
+    color: white;
+}
+
+.company, .service-title {
+    text-align: center;
 }
 
 .about {
@@ -97,7 +109,6 @@ img.logo {
 
 .row-wrap {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -109,16 +120,34 @@ img.logo {
 .services {
     font-size: 0.8em;
     padding: 3%;
-    background-color: #a6a6a6;
+    /*background-color: #a6a6a6;*/
+    background-image: url("../images/work.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrap {
+    padding: 2% 20%;
 }
 
 .service {
-    padding: 2% 5%;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5%;
     text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .icon-service {
-    width: 25%;
+    width: 15%;
+}
+
+.desc-service {
+    margin-top: auto;
 }
 
 .footer {
@@ -136,7 +165,7 @@ img.logo {
 @media screen and (max-width: 820px) {
     body {
         font-size: 20px;
-    }K
+    }
 
     .menu {
         background: black;
@@ -156,8 +185,8 @@ img.logo {
         line-height: 3em;
     }
 
-    .col-50, .col-40, .col-35, .col-30 {
-       width: 100%;
+    .col-50, .col-40, .col-35, .col-30, .col-25 {
+        width: 100%;
     }
 
     .row {
@@ -167,10 +196,20 @@ img.logo {
     .img-col {
         width: 80%;
     }
-}
 
-/*@media screen and (min-width: 2000px) {*/
-/*    body {*/
-/*        font-size: 48px;*/
-/*    }*/
-/*}*/
+    .service {
+        padding: 3%;
+    }
+
+    .icon-service {
+        width: 20%;
+    }
+
+    .wrap {
+        padding: 3%;
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+}
