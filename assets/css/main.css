@@ -71,7 +71,7 @@ img.logo {
     height: 80vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 .title {
@@ -95,7 +95,7 @@ img.logo {
     padding: 10px;
 }
 
-.footer a {
+.footer a, .footer p {
     color: white;
 }
 
@@ -162,13 +162,77 @@ img.logo {
     line-height: 2em;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+.slider {
+    position: relative;
+    width: 380px;
+    margin: 0 20px 20px 20px;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+.slide {
+    max-height: 380px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+}
+
+.slider img {
+    poiner-events: none;
+    max-height: 378px;
+}
+
+.slider-list {
+    overflow: hidden;
+}
+
+.slider-list.grab {
+    cursor: grab;
+}
+
+.slider-list.grabbing {
+    cursor: grabbing;
+}
+
+.slider-track {
+    display: flex;
+}
+
+.slider-arrows {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.next,
+.prev {
+    background: none;
+    border: none;
+    margin: 0 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.next.disabled,
+.prev.disabled {
+    opacity: .25;
+    pointer-events: none;
+}
+
+@media screen and  (min-width: 820px) {
+    .desktop-hidden {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 820px) {
     body {
         font-size: 20px;
-    }
-
-    .menu {
-        background: black;
     }
 
     .menu.row, .menu .row {
@@ -180,8 +244,12 @@ img.logo {
         margin: 5% 2%;
     }
 
+    .header {
+        background-size: cover;
+    }
+
     .footer a {
-        font-size: 2em;
+        font-size: 1.5em;
         line-height: 3em;
     }
 
@@ -199,10 +267,12 @@ img.logo {
 
     .service {
         padding: 3%;
+        text-align: left;
     }
 
     .icon-service {
         width: 20%;
+        margin-right: 5px;
     }
 
     .wrap {
@@ -211,5 +281,43 @@ img.logo {
 
     .mobile-hidden {
         display: none;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .title {
+        margin: 8%;
+        max-width: 85%;
+    }
+
+    .about {
+        margin-top: 15%;
+    }
+
+    .slider {
+        width: 320px;
+    }
+
+    .slide {
+        max-height: 320px;
+    }
+
+    .slider img {
+        max-height: 318px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .slider {
+        margin: 0 10px 10px 10px;
+        width: 300px;
+    }
+
+    .slide {
+        max-height: 300px;
+    }
+
+    .slider img {
+        max-height: 298px;
     }
 }
