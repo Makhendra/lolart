@@ -7,6 +7,7 @@ body {
 img {
     width: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .row {
@@ -41,10 +42,6 @@ img {
 
 .col-100 {
     width: 100%;
-}
-
-.p-5 {
-    padding: 5%;
 }
 
 .pt-15 {
@@ -107,6 +104,14 @@ img.logo {
     align-items: center;
 }
 
+.about h2 {
+    margin-bottom: 0;
+}
+
+.company-p {
+    padding: 3% 5%;
+}
+
 .row-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -120,7 +125,6 @@ img.logo {
 .services {
     font-size: 0.8em;
     padding: 3%;
-    /*background-color: #a6a6a6;*/
     background-image: url("../images/work.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -134,7 +138,7 @@ img.logo {
 .service {
     background: rgba(255, 255, 255, 0.5);
     padding: 5%;
-    text-align: center;
+    text-align: left;
 
     display: flex;
     flex-direction: row;
@@ -144,6 +148,7 @@ img.logo {
 
 .icon-service {
     width: 15%;
+    margin-right: 2%;
 }
 
 .desc-service {
@@ -175,17 +180,15 @@ img.logo {
 }
 
 .slide {
-    max-height: 380px;
+    max-width: 380px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #000;
 }
 
 .slider img {
     poiner-events: none;
-    max-height: 378px;
 }
 
 .slider-list {
@@ -267,7 +270,6 @@ img.logo {
 
     .service {
         padding: 3%;
-        text-align: left;
     }
 
     .icon-service {
@@ -299,11 +301,7 @@ img.logo {
     }
 
     .slide {
-        max-height: 320px;
-    }
-
-    .slider img {
-        max-height: 318px;
+        max-width: 320px;
     }
 }
 
@@ -314,10 +312,6 @@ img.logo {
     }
 
     .slide {
-        max-height: 300px;
-    }
-
-    .slider img {
-        max-height: 298px;
+        max-width: 300px;
     }
 }
