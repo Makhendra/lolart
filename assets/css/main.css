@@ -122,6 +122,15 @@ img.logo {
     margin: 5%;
 }
 
+.slider {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.slider img {
+    min-height: 40vh;
+}
+
 .services {
     font-size: 0.8em;
     padding: 3%;
@@ -165,66 +174,6 @@ img.logo {
 .footer a {
     font-size: 2em;
     line-height: 2em;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.slider {
-    position: relative;
-    width: 380px;
-    margin: 0 20px 20px 20px;
-    user-select: none;
-    touch-action: pan-y;
-}
-
-.slide {
-    max-width: 380px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slider img {
-    poiner-events: none;
-}
-
-.slider-list {
-    overflow: hidden;
-}
-
-.slider-list.grab {
-    cursor: grab;
-}
-
-.slider-list.grabbing {
-    cursor: grabbing;
-}
-
-.slider-track {
-    display: flex;
-}
-
-.slider-arrows {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.next,
-.prev {
-    background: none;
-    border: none;
-    margin: 0 10px;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.next.disabled,
-.prev.disabled {
-    opacity: .25;
-    pointer-events: none;
 }
 
 @media screen and  (min-width: 820px) {
@@ -294,24 +243,5 @@ img.logo {
 
     .about {
         margin-top: 15%;
-    }
-
-    .slider {
-        width: 320px;
-    }
-
-    .slide {
-        max-width: 320px;
-    }
-}
-
-@media screen and (max-width: 321px) {
-    .slider {
-        margin: 0 10px 10px 10px;
-        width: 300px;
-    }
-
-    .slide {
-        max-width: 300px;
     }
 }
